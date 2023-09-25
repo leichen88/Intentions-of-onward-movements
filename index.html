@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ai2html fixed layout</title>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <link href="css/svg-style-1.css" rel="stylesheet" />
+</head>
+
+<body class="d-flex flex-column vh-100">
+          <!-- Animation-->
+          <div id="g-ai2html-fixed-box" class="ai2html">
+
+            <!-- Artboard: _480 -->
+            <div id="g-ai2html-fixed-_480" class="g-artboard" style="max-width: 480px;max-height: 270px" data-aspect-ratio="1.778" data-min-width="0" data-max-width="699">
+          <div style="padding: 0 0 56.25% 0;"></div>
+              <img id="g-ai2html-fixed-_480-img" class="g-aiImg" alt="" src="ai2html-fixed-_480.png"/>
+            </div>
+          
+            <!-- Artboard: _700 -->
+            <div id="g-ai2html-fixed-_700" class="g-artboard" style="width:700px; height:393.75px;" data-aspect-ratio="1.778" data-min-width="700" data-max-width="959">
+          <div style=""></div>
+              <img id="g-ai2html-fixed-_700-img" class="g-aiImg" alt="" src="ai2html-fixed-_700.png"/>
+            </div>
+          
+            <!-- Artboard: _960 -->
+            <div id="g-ai2html-fixed-_960" class="g-artboard" style="width:960px; height:540px;" data-aspect-ratio="1.778" data-min-width="960">
+          <div style=""></div>
+              <img id="g-ai2html-fixed-_960-img" class="g-aiImg" alt="" src="ai2html-fixed-_960.png"/>
+            </div>
+          
+          </div>
+
+          <!-- End animation-->   
+  <!-- End Main -->
+
+  <!-- D3 script -->
+  <script>
+    function animateRoute() {
+      d3.selectAll("[data-name='movements'] path")
+        .transition()
+        .duration(2000)
+        .ease(d3.easeLinear)
+        .attrTween('stroke-dasharray', function() {
+          const length = this.getTotalLength();
+          return d3.interpolate(`0, ${length}`, `${length}, 0`);
+        })
+        .on("end", animateRoute); // restart the animation when it ends
+    }
+    animateRoute();
+    </script>
+  <!-- End D3 script -->
+
+  <!-- Scripts -->
+  <!-- bs/popper bundle -->
+
+  <!-- ai2html resizer JS file-->
+  <script src="js/ai2html-resizer.js"></script>
+  <!-- End scripts -->
+</body>
+
+</html>

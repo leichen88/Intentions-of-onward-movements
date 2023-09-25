@@ -1,0 +1,33 @@
+#g-ai2html-fixed-box ,
+	#g-ai2html-fixed-box .g-artboard {
+		margin:0 auto;
+	}
+	#g-ai2html-fixed-box p {
+		margin:0;
+	}
+	#g-ai2html-fixed-box .g-aiAbs {
+		position:absolute;
+	}
+	#g-ai2html-fixed-box .g-aiImg {
+		position:absolute;
+		top:0;
+		display:block;
+		width:100% !important;
+	}
+	#g-ai2html-fixed-box .g-aiSymbol {
+		position: absolute;
+		box-sizing: border-box;
+	}
+	#g-ai2html-fixed-box .g-aiPointText p { white-space: nowrap; }
+	#g-ai2html-fixed-_480 {
+		position:relative;
+		overflow:hidden;
+	}
+	#g-ai2html-fixed-_700 {
+		position:relative;
+		overflow:hidden;
+	}
+	#g-ai2html-fixed-_960 {
+		position:relative;
+		overflow:hidden;
+	}
